@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  flex-flow: row-wrap;
+}
+body::after {
+  content: "";
+  background: url('../img/80s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  }
+
+
+[class*="face"] {
+  @extend %face;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+
+  // justify-content: space-between;
+}
+
+
+.pip {
+  display: block;
+  @extend %dots;
+  // align-items: center;
+}
+
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-face {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  .pip:last-child {
+    align-self: flex-end;
+    margin: 15px;
+  }
+  .pip:first-child {
+    align-self: flex-start;
+    margin: 15px;
+  }
+}
+
+.third-face {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  .pip:last-child {
+    align-self: flex-end;
+    margin: 15px;
+  }
+  .pip:nth-child(2){
+    align-self: center;
+  }
+  .pip:first-child {
+    align-self: flex-start;
+    margin: 15px;
+  }
+}
+
+.fourth-face {
+  justify-content: space-between;
+  display: flex;
+}
+  .column {
+    flex-flow: column;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin: 20px;
+}
+
+
+.fifth-face {
+  justify-content: space-between;
+  display: flex;
+&column:first-child {
+  flex-flow: column;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px;
+  }
+  .column:nth-child(2){
+      flex-flow: column;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px;
+  }
+}
+
+.sixth-face {
+  display: flex;
+  justify-content: space-around;
+}
